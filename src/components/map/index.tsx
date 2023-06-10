@@ -3,7 +3,6 @@
 import GoogleMapReact from "google-map-react";
 import { useState } from "react";
 import style from "./styles.module.scss";
-import { Input } from "antd";
 import ProfileQuickView from "@components/profileQuickView";
 
 const Map = () => {
@@ -37,6 +36,7 @@ const Map = () => {
               width: "20px", // Adjust size as needed
               height: "20px",
             }}
+
           />
         </div>
         <ProfileQuickView setOpen={setOpen} open={open} />
@@ -70,8 +70,8 @@ const Map = () => {
           defaultZoom={zoom}
           options={mapOptions as any}
         >
-          {markers.map(({ lat, lng }) => (
-            <Marker lat={lat} lng={lng} />
+          {markers.map(({ lat, lng, id }) => (
+            <Marker lat={lat} lng={lng} key={id} />
           ))}
         </GoogleMapReact>
       </div>
