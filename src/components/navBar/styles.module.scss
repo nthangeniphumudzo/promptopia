@@ -15,7 +15,7 @@
     justify-content: space-between;
     color: rgb(113, 111, 111);
 
-    @media (max-width: 400px) {
+    @media (max-width: 650px) {
       /* Styles for large displays */
       &.largeDisplayOnly {
         display: none;
